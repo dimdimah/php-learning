@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="?page=homepage">Navbar</a>
             <a href="?page=form-data-mahasiswa" class="load-content navbar-brand">Load Page 1</a>
             <a href="?page=form-data-akademik" class="load-content navbar-brand">Load Page 2</a>
         </div>
@@ -25,9 +25,13 @@
                 include 'formDataMhs.php';
             } elseif ($page == 'form-data-akademik') {
                 include 'formAkademik.php';
-            } else {
+            } elseif ($page == 'homepage') {
                 echo '<h1>Welcome to the Home Page</h1>';
                 echo '<p>This is the default content.</p>';
+            }
+            else {
+                echo '<h1>Page Not Found</h1>';
+                echo '<p>The page you are looking for does not exist.</p>';
             }
         } else {
             echo '<h1>Welcome to the Home Page</h1>';
